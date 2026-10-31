@@ -1,0 +1,1 @@
+mongodb+srv://nzapadiya288_db_user:P9nIF1PZnWJe9x8u@my-cluster.ynapcpn.mongodb.net/

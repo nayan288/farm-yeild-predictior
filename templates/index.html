@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Yield Prediction Input Form</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-4">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow">
+          <div class="card-header bg-primary text-white">
+            <h3 class="card-title mb-0">Crop Yield Feature Inputs</h3>
+          </div>
+          <div class="card-body">
+            <form id="yieldForm" method="POST">
+              
+              <!-- Categorical Dropdowns -->
+              <h5 class="text-secondary border-bottom pb-2 mb-3">Categorical Parameters</h5>
+              <div class="row g-3">
+
+                <!-- Mobile Number -->                
+                <div class="col-md-6 col-lg-4">
+                  <label for="mob" class="form-label">Enter Mobile No</label>
+                  <input type="text" placeholder="ENter mobile no" class="form-control" id="mob" name="mob">
+                </div>
+                <!-- Full Name -->                
+                <div class="col-md-6 col-lg-4">
+                  <label for="fullname" class="form-label">Enter Your Name</label>
+                  <input type="text" placeholder="enter your full-name" class="form-control" id="fullname" name="fullname">
+                </div>
+
+                <!-- Crop Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="crop_code" class="form-label">Crop</label>
+                  <select class="form-select" id="crop_code" name="crop_code">
+                    <option value="" selected disabled>Select Crop</option>
+                    <option value="1">Rice</option>
+                    <option value="2">Wheat</option>
+                    <option value="3">Maize</option>
+                    <option value="4">Bajra (Pearl Millet)</option>
+                    <option value="5">Jowar (Sorghum)</option>
+                    <option value="6">Ragi (Finger Millet)</option>
+                    <option value="7">Barley</option>
+                    <option value="8">Chickpea (Gram)</option>
+                    <option value="9">Pigeon Pea (Tur)</option>
+                    <option value="10">Moong (Green Gram)</option>
+                    <option value="11">Urad (Black Gram)</option>
+                    <option value="12">Lentil (Masoor)</option>
+                    <option value="13">Groundnut</option>
+                    <option value="14">Soybean</option>
+                    <option value="15">Mustard (Rapeseed)</option>
+                    <option value="16">Sunflower</option>
+                    <option value="17">Sesame (Til)</option>
+                    <option value="18">Castor</option>
+                    <option value="19">Cumin (Jeera)</option>
+                    <option value="20">Cotton</option>
+                    <option value="21">Sugarcane</option>
+                    <option value="22">Jute</option>
+                    <option value="23">Potato</option>
+                    <option value="24">Onion</option>
+                    <option value="25">Tomato</option>
+                    <option value="26">Chilli</option>
+                    <option value="27">Turmeric</option>
+                    <option value="28">Banana</option>
+                    <option value="29">Tapioca (Cassava)</option>
+                  </select>
+                </div>
+
+                <!-- State Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="state_code" class="form-label">State</label>
+                  <select class="form-select" id="state_code" name="state_code">
+                    <option value="" selected disabled>Select State</option>
+                    <option value="1">Punjab</option>
+                    <option value="2">Haryana</option>
+                    <option value="3">Uttar Pradesh</option>
+                    <option value="4">Bihar</option>
+                    <option value="5">West Bengal</option>
+                    <option value="6">Odisha</option>
+                    <option value="7">Madhya Pradesh</option>
+                    <option value="8">Rajasthan</option>
+                    <option value="9">Gujarat</option>
+                    <option value="10">Maharashtra</option>
+                    <option value="11">Karnataka</option>
+                    <option value="12">Andhra Pradesh</option>
+                    <option value="13">Telangana</option>
+                    <option value="14">Tamil Nadu</option>
+                    <option value="15">Kerala</option>
+                    <option value="16">Assam</option>
+                    <option value="17">Chhattisgarh</option>
+                    <option value="18">Jharkhand</option>
+                  </select>
+                </div>
+
+                <!-- Agro-Climatic Zone Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="agro_climatic_zone_code" class="form-label">Agro-Climatic Zone</label>
+                  <select class="form-select" id="agro_climatic_zone_code" name="agro_climatic_zone_code">
+                    <option value="" selected disabled>Select Zone</option>
+                    <option value="1">Western Himalayan Region</option>
+                    <option value="2">Eastern Himalayan Region</option>
+                    <option value="3">Lower Gangetic Plains Region</option>
+                    <option value="4">Middle Gangetic Plains Region</option>
+                    <option value="5">Upper Gangetic Plains Region</option>
+                    <option value="6">Trans-Gangetic Plains Region</option>
+                    <option value="7">Eastern Plateau and Hills Region</option>
+                    <option value="8">Central Plateau and Hills Region</option>
+                    <option value="9">Western Plateau and Hills Region</option>
+                    <option value="10">Southern Plateau and Hills Region</option>
+                    <option value="11">East Coast Plains and Hills Region</option>
+                    <option value="12">West Coast Plains and Hills Region</option>
+                    <option value="13">Gujarat Plains and Hills Region</option>
+                    <option value="14">Western Dry Region</option>
+                    <option value="15">The Islands Region</option>
+                  </select>
+                </div>
+
+                <!-- Season Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="season_code" class="form-label">Season</label>
+                  <select class="form-select" id="season_code" name="season_code">
+                    <option value="" selected disabled>Select Season</option>
+                    <option value="1">Kharif (Jun-Oct)</option>
+                    <option value="2">Rabi (Nov-Mar)</option>
+                    <option value="3">Zaid (Mar-Jun)</option>
+                    <option value="4">Annual / Perennial</option>
+                  </select>
+                </div>
+
+                <!-- Soil Type Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="soil_type_code" class="form-label">Soil Type</label>
+                  <select class="form-select" id="soil_type_code" name="soil_type_code">
+                    <option value="" selected disabled>Select Soil Type</option>
+                    <option value="1">Alluvial</option>
+                    <option value="2">Black (Regur)</option>
+                    <option value="3">Red</option>
+                    <option value="4">Laterite</option>
+                    <option value="5">Arid / Desert</option>
+                    <option value="6">Mountain / Forest</option>
+                    <option value="7">Saline / Alkaline</option>
+                  </select>
+                </div>
+
+                <!-- Irrigation Type Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="irrigation_type_code" class="form-label">Irrigation Type</label>
+                  <select class="form-select" id="irrigation_type_code" name="irrigation_type_code">
+                    <option value="" selected disabled>Select Irrigation Type</option>
+                    <option value="1">Rainfed (no irrigation)</option>
+                    <option value="2">Canal</option>
+                    <option value="3">Tube well / Borewell</option>
+                    <option value="4">Open well</option>
+                    <option value="5">Drip</option>
+                    <option value="6">Sprinkler</option>
+                    <option value="7">Tank / Pond</option>
+                  </select>
+                </div>
+
+                <!-- Seed Type Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="seed_type_code" class="form-label">Seed Type</label>
+                  <select class="form-select" id="seed_type_code" name="seed_type_code">
+                    <option value="" selected disabled>Select Seed Type</option>
+                    <option value="1">Local / Traditional</option>
+                    <option value="2">Improved (certified / OPV)</option>
+                    <option value="3">Hybrid</option>
+                    <option value="4">Bt Hybrid (cotton)</option>
+                  </select>
+                </div>
+
+                <!-- Mechanization Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="mechanization_code" class="form-label">Mechanization Level</label>
+                  <select class="form-select" id="mechanization_code" name="mechanization_code">
+                    <option value="" selected disabled>Select Level</option>
+                    <option value="0">None (manual / animal power)</option>
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                  </select>
+                </div>
+
+                <!-- Pest/Disease Code -->
+                <div class="col-md-6 col-lg-4">
+                  <label for="pest_disease_code" class="form-label">Pest / Disease Severity</label>
+                  <select class="form-select" id="pest_disease_code" name="pest_disease_code">
+                    <option value="" selected disabled>Select Severity</option>
+                    <option value="0">None</option>
+                    <option value="1">Low</option>
+                    <option value="2">Moderate</option>
+                    <option value="3">High</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Numerical Parameters -->
+              <h5 class="text-secondary border-bottom pb-2 mb-3 mt-4">Numerical & Agronomic Measurements</h5>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="farm_size_ha" class="form-label">Farm Size (ha)</label>
+                  <input type="number" step="0.01" class="form-control" id="farm_size_ha" name="farm_size_ha" placeholder="e.g. 2.5">
+                </div>
+                <div class="col-md-4">
+                  <label for="soil_ph" class="form-label">Soil pH</label>
+                  <input type="number" step="0.1" class="form-control" id="soil_ph" name="soil_ph" placeholder="e.g. 6.5">
+                </div>
+                <div class="col-md-4">
+                  <label for="organic_carbon_pct" class="form-label">Organic Carbon (%)</label>
+                  <input type="number" step="0.01" class="form-control" id="organic_carbon_pct" name="organic_carbon_pct" placeholder="e.g. 0.5">
+                </div>
+                <div class="col-md-4">
+                  <label for="nitrogen_kg_ha" class="form-label">Nitrogen (kg/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="nitrogen_kg_ha" name="nitrogen_kg_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="phosphorus_kg_ha" class="form-label">Phosphorus (kg/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="phosphorus_kg_ha" name="phosphorus_kg_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="potassium_kg_ha" class="form-label">Potassium (kg/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="potassium_kg_ha" name="potassium_kg_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="soil_moisture_pct" class="form-label">Soil Moisture (%)</label>
+                  <input type="number" step="0.1" class="form-control" id="soil_moisture_pct" name="soil_moisture_pct">
+                </div>
+                <div class="col-md-4">
+                  <label for="avg_temp_c" class="form-label">Avg Temp (°C)</label>
+                  <input type="number" step="0.1" class="form-control" id="avg_temp_c" name="avg_temp_c">
+                </div>
+                <div class="col-md-4">
+                  <label for="rainfall_mm" class="form-label">Rainfall (mm)</label>
+                  <input type="number" step="0.1" class="form-control" id="rainfall_mm" name="rainfall_mm">
+                </div>
+                <div class="col-md-4">
+                  <label for="humidity_pct" class="form-label">Humidity (%)</label>
+                  <input type="number" step="0.1" class="form-control" id="humidity_pct" name="humidity_pct">
+                </div>
+                <div class="col-md-4">
+                  <label for="sunshine_hours" class="form-label">Sunshine Hours/day</label>
+                  <input type="number" step="0.1" class="form-control" id="sunshine_hours" name="sunshine_hours">
+                </div>
+                <div class="col-md-4">
+                  <label for="sowing_month" class="form-label">Sowing Month (1-12)</label>
+                  <input type="number" min="1" max="12" class="form-control" id="sowing_month" name="sowing_month" placeholder="1 = Jan, 12 = Dec">
+                </div>
+                <div class="col-md-4">
+                  <label for="crop_duration_days" class="form-label">Crop Duration (Days)</label>
+                  <input type="number" class="form-control" id="crop_duration_days" name="crop_duration_days">
+                </div>
+                <div class="col-md-4">
+                  <label for="seed_rate_kg_ha" class="form-label">Seed Rate (kg/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="seed_rate_kg_ha" name="seed_rate_kg_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="fertilizer_kg_ha" class="form-label">Fertilizer N+P+K (kg/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="fertilizer_kg_ha" name="fertilizer_kg_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="organic_manure_t_ha" class="form-label">Organic Manure (t/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="organic_manure_t_ha" name="organic_manure_t_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="pesticide_l_ha" class="form-label">Pesticide (L/ha)</label>
+                  <input type="number" step="0.01" class="form-control" id="pesticide_l_ha" name="pesticide_l_ha">
+                </div>
+                <div class="col-md-4">
+                  <label for="num_irrigations" class="form-label">Number of Irrigations</label>
+                  <input type="number" min="0" class="form-control" id="num_irrigations" name="num_irrigations">
+                </div>
+                <div class="col-md-4">
+                  <label for="labour_days_ha" class="form-label">Labour (person-days/ha)</label>
+                  <input type="number" step="0.1" class="form-control" id="labour_days_ha" name="labour_days_ha">
+                </div>
+              </div>
+
+              <div class="mt-4 text-end">
+                <button type="reset" class="btn btn-outline-secondary me-2">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit Data</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        {% if result %}
+        <div class="alert alert-success mt-4" role="alert">
+          <h5 class="alert-heading">Predicted Crop Yield</h5>
+          <p class="mb-0">The predicted crop yield is: <strong>{{ result }}</strong></p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
