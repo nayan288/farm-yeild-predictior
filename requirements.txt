@@ -1,6 +1,5 @@
-flask
-pandas
-numpy
+Flask
 joblib
 scikit-learn
 pymongo
+dnspython
